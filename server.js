@@ -16,8 +16,6 @@ const modalRoutes = require("./routes/modal")
 
 const bidsRoutes = require("./routes/bids")
 
-
-
 //Use .env file in config folder
 require("dotenv").config({ path: "./config/.env" });
 
@@ -74,9 +72,27 @@ app.use("/bid", bidsRoutes);
 //   console.log("Server is running, you better catch it!");
 // });
 
+
+
+
 app.listen(process.env.PORT || 5550, () => {
   console.log('Server is running.')
 })
+
+
+
+//for CYCLIC
+// connectDB().then( () => {
+//   app.listen(process.env.PORT, () => {
+//     console.log("Server is running, you better catch it!");
+//   });
+// }
+// )
+
+
+
+
+
 
 // app.listen(process.env.PORT || PORT, () => {
 //   console.log('Server is running.')
