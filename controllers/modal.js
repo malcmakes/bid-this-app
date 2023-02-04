@@ -1,6 +1,6 @@
 const cloudinary = require("../middleware/cloudinary");
 const Post = require("../models/Post");
-const Modal = require("../models/Modal");
+// const Modal = require("../models/Modal");
 
 module.exports = {
     showModal: async (req, res) => {
