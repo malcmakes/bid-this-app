@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const modalController = require("../controllers/Modal")
+const modalController = require("../controllers/modal")
 
 // const commentsController = require("../controllers/comments");
 const { ensureAuth, ensureGuest } = require("../middleware/auth");
