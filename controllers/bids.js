@@ -28,4 +28,3 @@ module.exports = {
     }
   },
 };
-// _id: req.params.commentid
