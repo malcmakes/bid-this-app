@@ -1,0 +1,106 @@
+<%- include('partials/headerLogin') -%>
+ <%- include('partials/modal') -%>
+
+<link rel="stylesheet" href="/css/style.css" type="text/css" />
+
+<div class="container">
+  <div class="row justify-content-center mt-5 pt-5">
+
+    <div class="col-6">
+      <div class="flex row justify-center">
+
+        <div class="deletePost ">
+          <!-- DELETE POST FORM AND BTN -->
+        <%if(post.user == user.id) {%>
+          <form
+            action="/post/deletePost/<%= post.id %>?_method=DELETE"
+            method="POST"
+            class="col-3"
+          >
+            <button class="btn  fa fa-trash" type="submit"></button>
+          </form>
+          <%}%>
+        <!-- ----------------------------------------------------- -->
+        </div>
+        
+        <h2><%= post.title %></h2>
+        <h2>$<%= post.price %></h2>
+        <h3 class="eggshell-bkg"><%= post.category%></h3>
+
+        <img class="" src="<%= post.image%>"/>
+
+        <!-- <img class="img-fluid " src="<%= post.image%>"/> -->
+
+          <p class="text-center mb-2"><%= post.caption %></p>
+      
+      </div>
+      <!-- START of modal for bids -->
+      <div class="test flex justify-center">
+        <button class="btn powder-blue-bkg text-3xl" id="myBtn">Place your bid</button>
+      </div>
+      
+      <div class="col-3 mt-5">
+      
+        <form action="/bid/createBid/<%=post._id%>" method="POST">
+          <div id="myModal" class="modal p-8">
+            <div class="modal-content flex justify-center text-center py-8">
+              <span class="close">&times;</span>
+              <h1 class="text-5xl"><%= post.title %></h1>
+              <h2 class="text-4xl pt-2">$<%= post.price %></h2>
+              <!-- Start of Price input box -->
+              <div class="mb-3 p-8">
+                <label for="exampleInputEmail1" class=" text-3xl form-label"
+                  >Enter Your Bid</label
+                >
+                <input
+                  type="text" 
+                  class="form-control" 
+                  id="bid" 
+                  name="bid"
+                  class=" form-width text-3xl form-control block m-auto my-2 large-font p-8"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                  name="email"
+                  placeholder="$<%= post.price %>"
+                />
+                <button type="submit" class="btn btn-primary bg-cyan-500 my-2">Submit</button>
+              </div>
+              <!-- End of Price input box -->
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <ul class="">
+        <% for(var i=0; i<bids.length; i++) {%>
+          <li class="col-6 block m-auto p-0">
+            User <%= bids[i].createdBy%> bids: "$<%= bids[i].bid%>"
+            <!-- Starts the conditional statment -->
+            <%if(bids[i].createdById == user.id) {%>
+            <form
+            action="/bid/deleteBid/<%= post.id %>/<%= bids[i]._id %>?_method=DELETE"
+            method="POST"
+          >
+            <button class=" btn btn-secondary vivid-tang-bkg" type="submit">Delete</button>
+            
+          </form>
+          <!-- Closes the conditional statement -->
+          <%}%>
+          </li>
+        <!-- Closes the EJS for loop for rendering each post -->
+        <% } %>
+      </ul>
+
+    </div>
+  </div>
+
+    <div class="text-center  mt-5 ">
+      <a class="btn btn-secondary powder-blue-bkg black-font" href="/feed">Home</a>
+      <a class="btn btn-secondary powder-blue-bkg black-font" href="/profile">Profile</a>
+    </div>
+  </div>
+</div>
+
+<script src="/js/contactModal.js"></script>
+
+<%- include('partials/footer') -%>

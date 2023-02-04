@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+/* :root {
+    color-scheme: dark light;
+} */
+
+html,
+body,
+.blueSaph {
+font-family: 'Quicksand', sans-serif;
+}
+
+.letter-spacing {
+    letter-spacing: -1px;
+}
+
+.hero-text {
+   width: 50%;
+   height: 50%;
+}
+
+/* .opacity-bkg{
+    background-color: #fff;
+} */
+
+.bold-font {
+    font-weight: bold;
+}
+
+.bold-font:hover {
+    text-decoration: underline;
+}
+
+/* HERO IMAGE ON index.ejs */
+#bkgImg {
+    /* background-image: url("/imgs/test2.jpg"); */
+    
+    background-image: url("/imgs/bid-this-app-banner-resize-for-web.jpg");
+    background-size: cover;
+    background-position: center center;
+}
+/* HERO IMAGE Media Query ON index.ejs for BELOW 800px */
+@media (max-width: 800px) {
+    #bkgImg {
+        /* border: red solid 5px; */
+        background-size: 900px;
+        background-repeat: no-repeat;
+    }
+}
+
+.test {
+   text-align: center;
+   display:block;
+   margin: 0;
+}
+
+.medium-font {
+    font-size: 25px;
+}
+
+.large-font {
+    font-size: 30px;
+}
+
+.white-font {
+    color: white;
+}
+
+.black-font {
+    color: black;
+}
+
+.white-bkg {
+    background: white;
+}
+
+.aero-blue {
+    color: rgb(184, 242, 230);
+}
+
+.powder-blue {
+    color: rgb(174, 217, 224);
+}
+
+.powder-blue-bkg {
+    background-color: rgb(174, 217, 224);
+}
+
+.black-coral {
+    color: rgb(94, 100, 114);
+}
+
+.black-coral-bkg {
+    background: rgb(94, 100, 114);
+}
+
+.eggshell-bkg {
+    background-color: rgb(250, 243, 221);
+}
+
+.vivid-tang-bkg {
+    background-color: rgb(255, 166, 158);
+}
+
+/* The Modal (background) */
+.modal {
+    
+    color: rgb(0, 95, 115);
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: red; /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+    padding-top: 20%;
+  }
+
+/* Modal Content/Box */
+#modal-content {
+    color: blue;
+    background-color: blue;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+  }
