@@ -7,10 +7,15 @@ Sellers can post items and buyers can "bid this" item.
 The highest bid before the time runs out is the winner.
 </h1>
 
-# Tools & Software
-# <h2>design: figma and photoshop</h2>
-# <h2>frontend: CSS,Tailwind,EJS,Bootstrap,JavaScript</h2>
-# <h2>backend: cloudinary, morgan, bcrypt, mongoose.</h2>
+<h1>Tools & Software</h1>
+
+<section>design: figma and photoshop </section>
+<section>frontend: CSS,Tailwind,EJS,Bootstrap,JavaScript</section>
+<section> cloudinary, morgan, bcrypt, mongodb,mongoose.</section>
+
+<h1>Lessons Learned</h1>
+<section>A greater understanding of architecting and developing full-stack web applications. Greater ability to work with a team and take a blueprint, and convert it into a presentable MVP.</section>
+
 
 # Installion
 
