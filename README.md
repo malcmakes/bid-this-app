@@ -6,8 +6,8 @@ is an app service that allows users to buy and sell items.
 Sellers can post items and buyers can "bid this" item. 
 The highest bid before the time runs out is the winner.
 
-
-<h1>Tools & Software</h1>
+<h1>How It's made</h1>
+<h3>Tools & Software:</h3>
 
 <section>design: figma and photoshop </section>
 <section>frontend: CSS,Tailwind,EJS,Bootstrap,JavaScript</section>
