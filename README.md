@@ -1,10 +1,13 @@
-app link: https://average-kilt-boa.cyclic.app/
-
 <h1>Bid This</h1>
-is an app service that allows users to buy and sell items.
 
+
+
+
+is an app service that allows users to buy and sell items.
 Sellers can post items and buyers can "bid this" item. 
 The highest bid before the time runs out is the winner.
+
+app link: https://average-kilt-boa.cyclic.app/
 
 <h1>How It's made</h1>
 <h3>Tools & Software:</h3>
